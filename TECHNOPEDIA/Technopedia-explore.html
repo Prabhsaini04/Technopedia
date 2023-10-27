@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHNOPEDIA | Explore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: powderblue;
+            text-align: center;
+            color: #fff;
+        }
+
+        header {
+            background-color: rgb(0, 187, 255);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            transition: background-color 0.3s;
+            font-size: larger;
+        }
+
+        header:hover {
+            background-color: #008B8B; /* Change background color on hover */
+        }
+        header h1:hover{
+           
+    font-size: 56px; /* Set the desired font size */
+    color: #333; /* Text color */
+    opacity: 0; /* Start with opacity 0 (invisible) */
+    animation: fadeIn 1s ease-in-out forwards; /* Animation definition */
+    transition: 0.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+    }
+}
+
+        nav {
+            background-color: #00aeff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        nav li {
+            display: inline;
+        }
+
+        nav a {
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #e5ff00;
+            transition: 1s;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 20px;
+            overflow: visible;
+            position: relative;
+            background-color: powderblue;
+            transition: transform 0.3s, background-color 0.3s;
+            color: black;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            background-color: #b0e0e6; 
+            cursor: pointer;
+        }
+
+        .button img {
+            width: 50%;
+            height: 50%;
+            object-fit: cover;
+        }
+
+        .button .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60%;
+            height: 60%;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .button:hover .overlay {
+            opacity: 1;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .nav a{
+        
+    font-size: 36px; /* Set the desired font size */
+    color: #333; /* Text color */
+    opacity: 0; /* Start with opacity 0 (invisible) */
+    animation: fadeIn 1s ease-in-out forwards; /* Animation definition */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TECHNOPEDIA </h1>
+    </header>
+
+    <nav>
+        <ul class="nav" >
+            <li><a href="Technopedia.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="button">
+        <a href="encryptor.html"><img src="890132.png" href="encryptor.html" alt="Button 1"></a>
+        <div class="overlay"></div>
+        <h3>Encryptor</h3>
+    </div>
+
+    <div class="button">
+        <a href="decryptor.html"><img src="6360303.png" href="decryptor.html" alt="Button 2"></a>
+        <div class="overlay"></div>
+        <h3>Decryptor</h3>
+    </div>
+
+    <div id="result"></div>
+
+    <footer>
+        <p>&copy; 2023 Techno Pedia | All rights reserved.</p>
+        <div class="contact">
+            <p>Phone: <strong>+91 98778-7XXXX</strong></p>
+            <p>Landline: <strong>| 0161 855 XXXX</strong></p>
+            <p>E-mail: <strong>| XYZ123@gmail.com</strong></p>
+        </div>
+    </footer>
+</body>
+</html>

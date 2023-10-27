@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Encryption</title>
+    <link rel="stylesheet" href="encryptor.css">
+    <script>
+        function encryptText() {
+            var inputText = document.getElementById('inputText').value;
+            var key = parseInt(document.getElementById('encryptionKey').value);
+            var result = '';
+
+            for (var i = 0; i < inputText.length; i++) {
+                var charCode = inputText.charCodeAt(i);
+
+                if (inputText[i].match(/[a-z]/)) {
+                    charCode = (charCode - 97 + key) % 26 + 97;
+                } else if (inputText[i].match(/[A-Z]/)) {
+                    charCode = (charCode - 65 + key) % 26 + 65;
+                }
+
+                result += String.fromCharCode(charCode);
+            }
+
+            document.getElementById('outputText').value = result;
+        }
+    </script>
+</head>
+<body>
+    <h1>Text Encryption</h1>
+    <label for="inputText">Enter plain text:</label>
+    <br>
+    <textarea id="inputText" rows="3" cols="50"></textarea>
+    <br>
+    <label for="encryptionKey">Enter encryption key (an integer):</label>
+    <br>
+    <input type="number" id="encryptionKey" />
+    <br>
+    <button onclick="encryptText()">Encrypt</button>
+    <br>
+    <label for="outputText">Cipher text:</label>
+    <br>
+    <textarea id="outputText" rows="3" cols="50"></textarea>
+</body>
+</html>

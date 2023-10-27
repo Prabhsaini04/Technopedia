@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Decryption</title>
+    <link rel="stylesheet" href="decryptor.css">
+    <script>
+        function decryptText() {
+            var cipherText = document.getElementById('cipherText').value;
+            var key = parseInt(document.getElementById('decryptionKey').value);
+            var result = '';
+
+            for (var i = 0; i < cipherText.length; i++) {
+                var charCode = cipherText.charCodeAt(i);
+
+                if (cipherText[i].match(/[a-z]/)) {
+                    charCode = (charCode - 97 - key + 26) % 26 + 97;
+                } else if (cipherText[i].match(/[A-Z]/)) {
+                    charCode = (charCode - 65 - key + 26) % 26 + 65;
+                }
+
+                result += String.fromCharCode(charCode);
+            }
+
+            document.getElementById('plainText').value = result;
+        }
+    </script>
+</head>
+<body>
+    <h1>Text Decryption</h1>
+    <label for="cipherText">Enter cipher text:</label>
+    <textarea id="cipherText" rows="3" cols="50"></textarea>
+    <br>
+    <label for="decryptionKey">Enter decryption key (an integer):</label>
+    <input type="number" id="decryptionKey" />
+    <br>
+    <button onclick="decryptText()">Decrypt</button>
+    <br>
+    <label for="plainText">Plain text:</label>
+    <textarea id="plainText" rows="3" cols="50"></textarea>
+</body>
+</html>
